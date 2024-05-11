@@ -13,6 +13,11 @@ class StudentController extends Controller
     $fields = [];
     $students = Student::query();
 
+    if($request->get('search')){
+        $students->where('firstname','like',"%{$request->get('search')}%")
+       ->orWhere('lastname','like',"%{$request->get('search')}%");
+    }   
+
     if($request->get('sex')){
         $students->where('sex',$request->get('sex'));
     }

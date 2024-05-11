@@ -24,6 +24,7 @@ class StudentFactory extends Factory
                 'BSCS'      => 'BSCS',
                 'BSIT'      => 'BSCS',
                 'PUREGOLD'  => 'PUREGOLD',
+                'MERCURY'  => 'MERCURY',
                 ]),
             'sex'       => array_rand(['MALE','FEMALE','HELICOPTER','RAINBOW']),
             'address'   => $this->faker->address(),
