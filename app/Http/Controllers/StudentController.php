@@ -41,4 +41,29 @@ class StudentController extends Controller
         Throw $th;
     }
    }
+   public function create(Request $request){
+    $newStudent = Student::create([
+        'firstname' => $request->firstname,
+        'lastname' => $request->lastname,
+        'year' => $request->year,
+        'course' => $request->course,
+        'sex' => $request->sex,
+        'address' => $request->address,
+    ]);
+    return $this->select($newStudent->id);
+   }
+
+   public function update(Request $request, $id){
+    $student = Student::findOrFail($id);
+    $student->update($request->all());
+
+    return response()->json($student);
+   }
+
+   public function delete($id){
+    $student = Student::findOrFail($id);
+    $student->delete();
+    return response()->json($student);
+   }
+
 }
