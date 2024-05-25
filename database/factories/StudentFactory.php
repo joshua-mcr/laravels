@@ -4,9 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
- */
+
 class StudentFactory extends Factory
 {
     /**
@@ -26,8 +24,8 @@ class StudentFactory extends Factory
             'course'    => array_rand([
                 'BSCS'      => 'BSCS',
                 'BSIT'      => 'BSCS',
-                'PUREGOLD'  => 'PUREGOLD',
-                'MERCURY'  => 'MERCURY',
+                'BEED'  => 'BEED',
+                'BSSS'  => 'BSSS',
                 ]),
              'section'    => array_rand([
                 '1a'      => '1a',
