@@ -49,6 +49,8 @@ class StudentController extends Controller
         'course' => $request->course,
         'sex' => $request->sex,
         'address' => $request->address,
+        'birthdate' => $request->birthdate,
+        'section' => $request->section,
     ]);
     return $this->select($newStudent->id);
    }
